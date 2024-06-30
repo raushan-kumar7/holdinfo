@@ -19,7 +19,7 @@ Step 1. Create project using NodeJS
 ```bash
   mkdir myprojectName
   cd myprojectName
-  npm install
+  npm init -y
 ```
 
 Step 2. Install the dependencies - express, cors, dotenv, axios, cookie-parser, ejs, moment moment-timezone, mongoose
