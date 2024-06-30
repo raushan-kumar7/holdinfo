@@ -4,7 +4,8 @@ import { Ticker } from "../models/ticker.model.js";
 const storeTickers = async (req, res) => {
   try {
     const result = await fetchAndStoreTickers();
-    res.render('index', { data: result.processedData });
+    const processedData = result.processedData || [];
+    res.render('index', { data: processedData });
   } catch (err) {
     res.status(500).json({ success: false, message: err.message });
   }
